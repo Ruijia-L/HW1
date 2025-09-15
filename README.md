@@ -25,10 +25,15 @@ label.checkbox { display: flex; align-items: center; gap: 8px; margin: 8px 0; li
 label.checkbox input[type="checkbox"] { width: 18px; height: 18px; margin: 0; }
 This solved vertical misalignment and kept spacing consistent across browsers.
 
-2. Placing section headers outside the cards with tight spacing
-Visually, the SUGGESTIONS and CARTS labels should sit on the gray background above each white card. I asked AI for a minimal, semantic way to do this without extra wrappers.
-The solution: keep <h2 class="section-header"> as a sibling before each card and tune margins in CSS:
-.section-header { font-size:14px; font-weight:800; text-transform:uppercase; margin: 2px 0; color:#011f5b; }
+2. Placing section headers outside the cards with tight spacing  
+Visually, the SUGGESTIONS and CARTS labels should sit on the gray background above each white card. I asked AI for a minimal, semantic way to do this without extra wrappers. The solution: keep as a sibling before each card and tune margins in CSS:
+.section-header {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 2px 0;
+  color: #011f5b;
+}
 That produced the desired look and alignment with small CSS.
 
 Customizing：
